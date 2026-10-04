@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body {
+  background: #ffffff;
+  color: #1b1f24;
+}
+
+::selection {
+  background: #f5b800;
+  color: #1b1f24;
+}
+
+*:focus-visible {
+  outline: 2px solid #1b1f24;
+  outline-offset: 2px;
+}
+
+@layer components {
+  /* Wide cut of Archivo for headlines — reads like machine-plate lettering. */
+  .display {
+    font-stretch: 118%;
+    letter-spacing: -0.02em;
+  }
+
+  /* Yellow/black hazard band. Used only to mark the breakdown hotline. */
+  .hazard {
+    background: repeating-linear-gradient(
+      -45deg,
+      #f5b800 0 12px,
+      #1b1f24 12px 24px
+    );
+  }
+}
